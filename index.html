@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Code+Pro:200,300,400,500,600,700,900" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/main.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" id="jam-links"></div>
+    </div>
+    <div class="row" id="event"></div>
+    <div class="row">
+      <div class="col-md-12" id="about-data-jam"></div>
+    </div>
+  </div>
+
+  <script id="jams" type="text/ractive">
+    {{#orderedJams:jamIndex}}
+      <jamLink/>
+    {{/}}
+  </script>
+
+  <script id="jam-link" type="text/ractive">
+    <a
+      href="./{{link}}"
+      class="{{active? 'active': ''}}"
+    >{{month}} {{year}} <strong>{{topic}}</strong></a> 
+  </script>
+
+  <script id="about" type="text/ractive">
+    <h2>about data jams</h2>
+    <description/>
+  </script>
+
+  <script id="jam-event" type="text/ractive">
+    {{#with jam}}
+      <div class="col-md-6">
+        <div class="jam-event-title">
+          <h3>data jam on</h3>
+          <h1>{{topic}}</h1>
+        </div>
+        <p>
+          <a target="_blank" href="http://www.meetup.com/Houston-Data-Visualization-Meetup/events/{{meetupId}}/"><i>{{month}} {{year}}</i></a>
+        </p>
+        <description/>
+        <a target="_blank" href="https://github.com/houstondatavis/{{githubRepo}}">
+          Get the data from <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+      </div>
+      {{#showcase.length}}
+      <div class="col-md-6" id="showcase">
+        <h2>Showcase</h2>
+        <div decorator='scrolly' class="list-group">
+          {{#showcase:itemIndex}}
+            <showcaseItem/>
+          {{/}}
+        </div>
+      </div>
+      {{/}}
+    {{/with}}
+  </script>
+
+  <script id="description" type="text/ractive">
+    <div decorator='linkExternal'>
+      {{{descriptionHTML}}}
+    </div>
+  </script>
+
+  <script id="item" type="text/ractive">
+    <div class="list-group-item" data-plot="{{mainLink}}" decorator='linkShowcase'>
+      <h3>{{title}}</h3>
+      <i>{{author}}</i>
+      <description/>
+      {{#links.length}}
+        {{#links:linkIndex}}
+          <showcaseLink/>
+        {{/}}
+      {{/}}
+    </div>
+  </script>
+
+  <script id="link" type="text/ractive">
+    {{# isPlot}}
+      <svg decorator='randoBar' class="plotter" width="100%" height="50" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="none" strokeWidth="1" fill="none" fill-rule="evenodd"></g>
+        <g fill="rgba(255, 255, 255, 0.9)">
+          <rect x="6" y="18" width="{{labelWidth}}" height="20"></rect>
+          <text x="10" y="35" fill="#333">see {{label}}</text>
+        </g>
+      </svg>
+    {{elseif isCode}}
+      <a target="_blank" href="{{url}}">
+        <pre><code>see code</code></pre>
+      </a>
+    {{/}}
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+  <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+  <script src="http://cdn.ractivejs.org/latest/ractive.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+
+  <script type="text/javascript" src="./data/october-2015.js"></script>
+  <script type="text/javascript" src="./data/february-2016.js"></script>
+  <script type="text/javascript" src="./data/events.js"></script>
+
+  <script type="text/javascript" src="./assets/jammer.js"></script>
+  <script type="text/javascript" src="./assets/views.js"></script>
+  <script type="text/javascript" src="./assets/main.js"></script>
+</body>
+</html>

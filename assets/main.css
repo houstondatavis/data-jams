@@ -1,0 +1,78 @@
+body {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.list-group-item[data-plot] {
+  cursor: pointer;
+}
+
+.list-group-item a {
+  display: block;
+  margin-top: 1em;
+}
+
+.list-group-item a:hover {
+  text-decoration: none;
+}
+
+.list-group-item a:hover pre {
+  background-color: rgba(178, 223, 138, 0.5);
+  color: rgba(51, 160, 44, 1);
+  border-color: rgba(51, 160, 44, 1);
+}
+
+svg, .list-group-item a pre, .list-group-item {
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+svg rect {
+  transition: fill 0.2s ease-in-out;
+  -ms-transition: fill 0.2s ease-in-out;
+  -moz-transition: fill 0.2s ease-in-out;
+  -webkit-transition: fill 0.2s ease-in-out;
+}
+
+svg:hover g:first-child rect {
+  fill: rgba(0, 0, 0, 0.15);
+}
+
+svg:hover {
+  background: rgba(166, 206, 227, 0.1);
+}
+
+.list-group-item:hover {
+  background: rgba(166, 206, 227, 0.05);
+}
+
+#jam-links, #about-data-jam {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#jam-links a {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#jam-links a.active {
+  text-decoration: underline;
+}
+
+#showcase .list-group {
+  overflow: auto;
+}
+
+.jam-event-title h1 {
+  margin-top: 0;
+}
+.jam-event-title h3 {
+  margin-bottom: 0;
+}
