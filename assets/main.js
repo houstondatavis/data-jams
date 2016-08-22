@@ -1,9 +1,10 @@
 (function(){
 
-  page('/', index, postRender)
-  page('/:event', checkEvent, show, postRender)
-  page('*', notFound)
-  page({hashbang: true})
+  page('/', index, postRender);
+  page('/:event', checkEvent, show, postRender);
+  page('*', notFound);
+  page({hashbang: true});
+  page.base('/data-jams');
 
 
   function index(context, next){
