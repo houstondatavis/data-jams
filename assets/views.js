@@ -97,7 +97,12 @@
     },
     decorators: {
       scrolly: function(listGroup){
-        listGroup.style.height = window.innerHeight - 200 + 'px';
+        // quick thing for now.
+        if(window.innerWidth < 768){
+          listGroup.style.height = 'reset';
+        } else {
+          listGroup.style.height = window.innerHeight - 200 + 'px';
+        }
         return {
           teardown: function(){}
         }

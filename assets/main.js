@@ -1,10 +1,11 @@
-(function(){
+(function(window, Jammer, Ractive, _, jamLinks, jamEvent){
+  'use strict';
 
   page('/', index);
   page('/:event', checkEvent, show);
   page('*', notFound);
   page({hashbang: true, dispatch: false});
-  page.base('/data-jams');
+  page.base(_.trimStart(location.pathname, '/'));
 
   index();
 
@@ -28,4 +29,4 @@
     return index();
   }
 
-})()
+})(window, Jammer, Ractive, _, jamLinks, jamEvent)
