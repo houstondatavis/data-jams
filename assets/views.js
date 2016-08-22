@@ -3,6 +3,8 @@
 
   var jammer = new Jammer();
 
+  var noTeardown = {teardown: function(){}};
+
   var Description = Ractive.extend({
     template: '#description',
     computed: {
@@ -14,10 +16,7 @@
       linkExternal: function(output){
         // needs to defer to only try to link after result html has been and mounted.
         _.defer(_.partial(jammer.linkExternal, output));
-
-        return {
-          teardown: function(){}
-        }
+        return noTeardown;
       }
     }
   });
@@ -50,9 +49,7 @@
     decorators: {
       randoBar: function(plotter){
         jammer.makeRandomBars(plotter);
-        return {
-          teardown: function(){}
-        }
+        return noTeardown;
       }
     }
   });
@@ -70,9 +67,7 @@
     decorators: {
       linkShowcase: function(showcase){
         jammer.linkShowcase(showcase);
-        return {
-          teardown: function(){}
-        }
+        return noTeardown;
       }
     }
   });
@@ -98,14 +93,12 @@
     decorators: {
       scrolly: function(listGroup){
         // quick thing for now.
-        if(window.innerWidth < 768){
+        if(window.innerWidth < 992){
           listGroup.style.height = 'reset';
         } else {
           listGroup.style.height = window.innerHeight - 200 + 'px';
         }
-        return {
-          teardown: function(){}
-        }
+        return noTeardown;
       }
     }
   });
