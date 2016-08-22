@@ -1,15 +1,15 @@
 (function(){
 
-  page('/', index, postRender);
-  page('/:event', checkEvent, show, postRender);
+  page('/', index);
+  page('/:event', checkEvent, show);
   page('*', notFound);
-  page({hashbang: true});
+  page({hashbang: true, dispatch: false});
   page.base('/data-jams');
 
+  index();
 
-  function index(context, next){
+  function index(){
     jamEvent.set('jam', jamLinks.get('mostRecentJam'));
-    next();
   }
 
   function checkEvent(context, next){
@@ -20,17 +20,12 @@
     next();
   }
 
-  function show(context, next){
+  function show(context){
     jamEvent.set('jam', jams[context.params.event]);
-    next();
-  }
-
-  function postRender(){
-
   }
 
   function notFound(){
-
+    return index();
   }
 
 })()
