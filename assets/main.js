@@ -5,8 +5,7 @@
   page('/:event', checkEvent, show);
   page('*', notFound);
   page({hashbang: true, dispatch: false});
-  page.base(_.trimStart(location.pathname, '/'));
-
+  page.base('/data-jams');
   index();
 
   function index(){
