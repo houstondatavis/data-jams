@@ -5,7 +5,7 @@ var octoberEvent = {
   month: 'October',
   year: '2015',
   description: 'The data set is Fort Bend county home pricing data from 2010 to 2015; with variables like `no. rooms`, `no. bathrooms`, `sq foot`, `price`, etc.\n\
-  All data were collected, cleaned and furnished by Clay Cahoon at Real Acquisitions, LLC.',
+  All data were collected, cleaned and furnished by [Clay Cahoon](https://www.meetup.com/Houston-Data-Visualization-Meetup/members/12896266/) at Real Acquisitions, LLC.',
   showcase: [{
     title: 'Plots with R',
     author: 'Marco, Thomas, and Dave',
