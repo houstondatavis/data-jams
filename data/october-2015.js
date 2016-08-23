@@ -4,7 +4,8 @@ var octoberEvent = {
   githubRepo: 'data-jam-october-2015',
   month: 'October',
   year: '2015',
-  description: 'Houston home pricing data',
+  description: 'The data set is Fort Bend county home pricing data from 2010 to 2015; with variables like `# rooms`, `# bathrooms`, `sq foot`, `price`, etc\
+  The data were collected and provided by Clay Cahoon at Real Acquisitions, LLC.',
   showcase: [{
     title: 'Plots with R',
     author: 'Marco, Thomas, and Dave',
