@@ -14,8 +14,11 @@
     },
     decorators: {
       linkExternal: function(output){
-        // needs to defer to only try to link after result html has been and mounted.
-        _.defer(_.partial(jammer.linkExternal, output));
+        // // needs to defer to only try to link after result html has been and mounted.
+        // _.defer(function(){
+        //   console.info(output.innerHTML);
+        //   jammer.linkExternal(output)
+        // });
         return noTeardown;
       }
     }
@@ -160,5 +163,6 @@
 
   window.jamEvent = jamEvent;
   window.jamLinks = jamLinks;
+  window.jammer = jammer;
 
 })(window, Jammer, Ractive, _)
