@@ -4,7 +4,7 @@ var octoberEvent = {
   githubRepo: 'data-jam-october-2015',
   month: 'October',
   year: '2015',
-  description: 'The data set is Fort Bend county home pricing data from 2010 to 2015; with variables like `# rooms`, `# bathrooms`, `sq foot`, `price`, etc\
+  description: 'The data set is Fort Bend county home pricing data from 2010 to 2015; with variables like `no. rooms`, `no. bathrooms`, `sq foot`, `price`, etc.\n\
   The data were collected and provided by Clay Cahoon at Real Acquisitions, LLC.',
   showcase: [{
     title: 'Plots with R',
