@@ -1,5 +1,5 @@
 var description = "we work in small teams to visualize a new data set in three hours. we announce the actual data set at the beginning of the event. all jams are tool agnostic, so you can choose to use what you're already comfortable with or try something new.\n\n\
-the goal is to learn from each other by producing many visualizations on a common data set. we'll often identify interesting patterns, but more importantly, we get to quickly compare design choices, statistical methods, tool choices, failures and successes. \n\n\
+the goal is to learn from each other by producing many visualizations on a common data set; we'll often identify interesting patterns, but more importantly we get to quickly compare design choices, statistical methods, tool choices, failures and successes. \n\n\
 approximate schedule:\n\n\
 * 9a coffee & bagels\n\
   * data set announced\n\
