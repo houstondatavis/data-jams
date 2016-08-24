@@ -33,7 +33,7 @@
 
   <script id="about" type="text/ractive">
     <h2>about data jams</h2>
-    <description/>
+    <mark markdown="{{description}}"/>
   </script>
 
   <script id="jam-event" type="text/ractive">
@@ -46,27 +46,33 @@
         <p>
           <a target="_blank" href="http://www.meetup.com/Houston-Data-Visualization-Meetup/events/{{meetupId}}/"><i>{{month}} {{year}}</i></a>
         </p>
-        <description/>
+        <mark markdown="{{description}}"/>
         <a target="_blank" href="https://github.com/houstondatavis/{{githubRepo}}">
-          Get the data from <i class="fa fa-github" aria-hidden="true"></i>
+          get the data from <i class="fa fa-github" aria-hidden="true"></i>
         </a>
       </div>
-      {{#showcase.length}}
       <div class="col-md-6" id="showcase">
         <h3>showcase</h3>
-        <div decorator='scrolly' class="list-group">
-          {{#showcase:itemIndex}}
-            <showcaseItem/>
-          {{/}}
-        </div>
+        {{#showcase.length}}
+          <div decorator='scrolly' class="list-group">
+            {{#showcase:itemIndex}}
+              <showcaseItem/>
+            {{/}}
+          </div>
+        {{/}}
+        {{#formUrl}}
+          <p>
+            <a class="btn btn-primary btn-lg" href="{{formUrl}}">share your project</a>            
+          </p>
+          <mark markdown="{{shareInstructions}}"/>
+        {{/}}
       </div>
-      {{/}}
     {{/with}}
   </script>
 
-  <script id="description" type="text/ractive">
+  <script id="mark" type="text/ractive">
     <div decorator='linkExternal'>
-      {{{descriptionHTML}}}
+      {{{contentHTML}}}
     </div>
   </script>
 
@@ -74,7 +80,7 @@
     <div class="list-group-item" data-plot="{{mainLink}}" decorator='linkShowcase'>
       <h3>{{title}}</h3>
       <i>{{author}}</i>
-      <description/>
+      <mark markdown="{{description}}"/>
       {{#links.length}}
         {{#links:linkIndex}}
           <showcaseLink/>
@@ -108,6 +114,7 @@
 
   <script type="text/javascript" src="./data/october-2015.js"></script>
   <script type="text/javascript" src="./data/february-2016.js"></script>
+  <script type="text/javascript" src="./data/august-2016.js"></script>
   <script type="text/javascript" src="./data/events.js"></script>
 
   <script type="text/javascript" src="./assets/jammer.js"></script>

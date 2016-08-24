@@ -5,11 +5,11 @@
 
   var noTeardown = {teardown: function(){}};
 
-  var Description = Ractive.extend({
-    template: '#description',
+  var Mark = Ractive.extend({
+    template: '#mark',
     computed: {
-      descriptionHTML: function(){
-        return marked(this.get('description') || '');
+      contentHTML: function(){
+        return marked(this.get('markdown') || '');
       }
     },
     decorators: {
@@ -80,9 +80,10 @@
     template: '#jam-event',
     components: {
       showcaseItem: ShowcaseItem,
-      description: Description
+      mark: Mark
     },
     data: {
+      shareInstructions: shareInstructions,
       jam: baseJam,
       getMainLink: function(itemIndex){
         return this.get('jam.showcase.' + itemIndex + '.links.0.url');
@@ -110,7 +111,7 @@
     el: 'about-data-jam',
     template: '#about',
     components: {
-      description: Description
+      mark: Mark
     },
     data: {
       description: description

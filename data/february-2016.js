@@ -1,8 +1,8 @@
 var febEvent = {
-  topic: 'Tweets with mental health terms',
+  topic: 'tweets with mental health terms',
   meetupId: '228076985',
   githubRepo: 'data-jam-february-2016',
-  month: 'February',
+  month: 'february',
   year: '2016',
   description: "The data set contains a collection of Tweets containing any of the following terms -- `alcoholic`, `depressed`, `depression`, `suicidal`, and `suicide` -- tweeted approximately from October 2014 to January 2015.\n\
 Tweets with target terms were collected from Twitter's [real-time streaming API](https://dev.twitter.com/streaming/overview) and then pre-processed by:\n\n\
