@@ -1,9 +1,9 @@
 var augustEvent = {
-  topic: 'US primary election results',
+  topic: 'US Primary election results',
   meetupId: '232548862',
   githubRepo: 'data-jam-august-2016',
   formUrl: 'https://goo.gl/forms/GNawy82uRoQt5zbv1',
-  month: 'august',
+  month: 'August',
   year: '2016',
   description: "The data includes US primary election results from 2016 and demographics by county.\n\
   Vote data included variables like `Vote_count` per candidate. County data included age and racial \
