@@ -7,8 +7,8 @@ var febEvent = {
   description: "The data set contains a collection of Tweets containing any of the following terms -- `alcoholic`, `depressed`, `depression`, `suicidal`, and `suicide` -- tweeted approximately from October 2014 to January 2015.\n\
 Tweets with target terms were collected from Twitter's [real-time streaming API](https://dev.twitter.com/streaming/overview) and then pre-processed by:\n\n\
 1. [Converting collected JSON to tab-delimited columns](https://github.com/houstondatavis/data-jam-february-2016/blob/master/scripts/0-shapeToCsv.js) of each Tweet's related term, date, Tweet body, latitude, longitude, and the Tweeter's follower count\n\
-1. [Reading into R to add quotes and escape special characters](https://github.com/houstondatavis/data-jam-february-2016/blob/master/scripts/1-adds-quotes-escapes.R) in values to preserve as much as the data as possible for reading into Python\n\
-1. Running the Tweet bodies [through a sentiment analysis](https://github.com/houstondatavis/data-jam-february-2016/blob/master/scripts/2-Classifier.ipynb) trained by a separate set of data. The result is added as a \"Neg\" score of `0.0` or `1.0` for \"not negative\" and \"negative\" respectively.  With this additional column, the data was outputted in both `tsv` and `json` for furthering processing and analysis.",
+1. [Reading into R to add quotes and escape special characters](https://github.com/houstondatavis/data-jam-february-2016/blob/master/scripts/1-adds-quotes-escapes.R) to preserve as much of the data as possible for reading into Python\n\
+1. Running the Tweet bodies [through a sentiment analysis](https://github.com/houstondatavis/data-jam-february-2016/blob/master/scripts/2-Classifier.ipynb) trained by a separate set of data. The result is added as a \"Neg\" score of `0.0` or `1.0` for \"not negative\" and \"negative\", respectively.  With this additional column, the data was outputted in both `tsv` and `json` for furthering processing and analysis.",
   showcase: [{
     title: 'Depressing Pronouns',
     author: 'Greg',
