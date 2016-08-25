@@ -98,9 +98,9 @@
       scrolly: function(listGroup){
         // quick thing for now.
         if(window.innerWidth < 992){
-          listGroup.style.height = 'reset';
+          listGroup.style.maxHeight = 'reset';
         } else {
-          listGroup.style.height = window.innerHeight - 200 + 'px';
+          listGroup.style.maxHeight = window.innerHeight - 200 + 'px';
         }
         return noTeardown;
       }
