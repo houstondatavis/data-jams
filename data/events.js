@@ -4,7 +4,7 @@ Approximate schedule:\n\n\
 * 9a coffee & bagels\n\
   * Data set announced\n\
   * Form teams, ready your laptops\n\
-* 930a Vsualize it\n\
+* 930a Visualize it\n\
 * 1230p Quick talks to share the visualizations we created";
 
 var shareInstructions = "\nThis is all about learning, so please share even if it's not polished :)";
