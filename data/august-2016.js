@@ -22,6 +22,18 @@ var augustEvent = {
       url: 'https://github.com/houstondatavis/data-jam-august-2016/blob/master/Primary_results_analysis.Rmd'
     }]
   }, {
+    title: 'Commute vs ideology',
+    author: 'Evan O\'Neil',
+    description: "I took a look at the relationship between voter's average daily commute times vs. the candidate they voted for, and based on a scale ranking provided by InsideGov ordered the candidates by ideology. \
+    My hypothesis was that longer commutes would reflect more conservative ideologies. \n\n\
+With the Democratic primary, the relationship is evident, though neither candidate is conservative on an objective scale. \
+    The Republican Party does not show this trend, though some candidates shifted ideologically (or perception-wise) to the left and/or right as the race progressed. \n\n\
+After thinking about it, I think longer commutes leading to more exposure to media is a significant factor, I would be very curious to compare candidate media time and ad exposure to this.",
+    links: [{
+      type: ['plot'],
+      url: '../data-jam-august-2016/data_jam-commute_vs_ideology'
+    }]
+  }, {
     title: 'Who got the most votes in Texas?',
     author: 'Michael',
     description: "",
