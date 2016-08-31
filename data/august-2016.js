@@ -11,6 +11,17 @@ var augustEvent = {
   Data were sourced from a [Kaggle competition](https://www.kaggle.com/benhamner/2016-us-election)\n\
   and were enriched with primary schedule, and primary type (open, closed, etc.) during the data jam.",
   showcase: [{
+    title: '2016 Presidential Primary Winner By Party by County Map',
+    author: 'Yulan & Justin',
+    description: "Mapping of who won the primary for President of USA in each major party by county",
+    links: [{
+      type: ['plot'],
+      url: 'https://github.com/JustinGOSSES/elections-data-jam/blob/master/Data%20Jam%20Exploration-And-Map.ipynb'
+    }, {
+      type: ['code'],
+      url: 'https://github.com/JustinGOSSES/elections-data-jam'
+    }]
+  }, {
     title: 'Visualizing partial response and feature interaction in a random forest',
     author: 'Victor',
     description: "An exploration using [forest floor](http://forestfloor.dk/).",
