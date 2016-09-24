@@ -38,7 +38,7 @@
 
   <script id="jam-event" type="text/ractive">
     {{#with jam}}
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div class="jam-event-title">
           <h3>data jam on</h3>
           <h1>{{topic}}</h1>
@@ -51,10 +51,10 @@
           learn more and get the data from <i class="fa fa-github" aria-hidden="true"></i>
         </a>
       </div>
-      <div class="col-md-6" id="showcase">
+      <div class="col-md-12">
         <h3>showcase</h3>
         {{#showcase.length}}
-          <div decorator='scrolly' class="list-group">
+          <div class="list-group">
             {{#showcase:itemIndex}}
               <showcaseItem/>
             {{/}}
@@ -62,7 +62,7 @@
         {{/}}
         {{#formUrl}}
           <p>
-            <a class="btn btn-primary btn-lg" href="{{formUrl}}">share your project</a>            
+            <a class="btn btn-primary btn-lg" href="{{formUrl}}" target="_blank">share your project</a>            
           </p>
           <mark markdown="{{shareInstructions}}"/>
         {{/}}
@@ -71,7 +71,7 @@
   </script>
 
   <script id="mark" type="text/ractive">
-    <div decorator='linkExternal'>
+    <div>
       {{{contentHTML}}}
     </div>
   </script>
