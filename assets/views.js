@@ -12,15 +12,8 @@
         return marked(this.get('markdown') || '');
       }
     },
-    decorators: {
-      linkExternal: function(output){
-        // // needs to defer to only try to link after result html has been and mounted.
-        // _.defer(function(){
-        //   console.info(output.innerHTML);
-        //   jammer.linkExternal(output)
-        // });
-        return noTeardown;
-      }
+    onchange: function(){
+      _.defer(_.partial(jammer.linkExternal, this.el));
     }
   });
 
@@ -93,17 +86,6 @@
       link: function(){
         return this.get('jam.month').toLowerCase() + '-' + this.get('jam.year');
       }
-    },
-    decorators: {
-      scrolly: function(listGroup){
-        // quick thing for now.
-        if(window.innerWidth < 992){
-          listGroup.style.maxHeight = 'reset';
-        } else {
-          listGroup.style.maxHeight = window.innerHeight - 200 + 'px';
-        }
-        return noTeardown;
-      }
     }
   });
 
@@ -165,5 +147,6 @@
   window.jamEvent = jamEvent;
   window.jamLinks = jamLinks;
   window.jammer = jammer;
+  window.Mark = Mark;
 
 })(window, Jammer, Ractive, _)

@@ -66,10 +66,6 @@ svg:hover {
   text-decoration: underline;
 }
 
-#showcase .list-group {
-  overflow: auto;
-}
-
 .jam-event-title h1 {
   margin-top: 0;
 }

@@ -1,4 +1,4 @@
-(function(window, Jammer, Ractive, _, jammer, jamLinks, jamEvent){
+(function(window, Ractive, _, jammer, jamLinks, jamEvent){
   'use strict';
 
   var intialContext = {params: {event: location.hash.replace('#!/', '')}};
@@ -37,7 +37,6 @@
   }
 
   function postRender(){
-    jammer.linkExternal(document);
   }
 
-})(window, Jammer, Ractive, _, jammer, jamLinks, jamEvent)
+})(window, Ractive, _, jammer, jamLinks, jamEvent)
