@@ -22,5 +22,6 @@ var baseJam = {
 var jams = {
   'october-2015': octoberEvent,
   'february-2016': febEvent,
-  'august-2016': augustEvent
+  'august-2016': augustEvent,
+  'october-2016': october2016Event
 };
