@@ -6,5 +6,12 @@ var december2016Event = {
   month: 'December',
   year: '2016',
   description: "Crime data from the Northside neighborhood in Houston.",
-  showcase: []
+  showcase: [{
+    title: 'Houston Near Northside Crime Data Exploration in Tableau',
+    author: 'Justin',
+    links: [{
+      type: ['plot'],
+      url: 'https://public.tableau.com/profile/justin.gosses#!/vizhome/HoustonNorthsideNeighborhoodCrimeExploration2016_versionB/NorthsideHoustonCrime'
+    }]
+  }]
 };
