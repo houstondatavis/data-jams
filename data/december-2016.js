@@ -13,5 +13,12 @@ var december2016Event = {
       type: ['plot'],
       url: 'https://public.tableau.com/profile/justin.gosses#!/vizhome/HoustonNorthsideNeighborhoodCrimeExploration2016_versionB/NorthsideHoustonCrime'
     }]
+  }, {
+    title: 'Offense by time',
+    author: 'Andy',
+    links: [{
+      type: ['plot'],
+      url: 'https://public.tableau.com/profile/publish/DataJam12032016/DataJam12032016#!/publish-confirm'
+    }]
   }]
 };
