@@ -9,6 +9,7 @@ var december2016Event = {
   showcase: [{
     title: 'Houston Near Northside Crime Data Exploration in Tableau',
     author: 'Justin',
+    description: "",
     links: [{
       type: ['plot'],
       url: 'https://public.tableau.com/profile/justin.gosses#!/vizhome/HoustonNorthsideNeighborhoodCrimeExploration2016_versionB/NorthsideHoustonCrime'
@@ -28,6 +29,17 @@ var december2016Event = {
     links: [{
       type: ['plot'],
       url: 'https://public.tableau.com/profile/publish/DataJam12032016/DataJam12032016#!/publish-confirm'
+    }]
+  }, {
+    title: 'Crimes in bird\'s eye view',
+    author: 'Martin',
+    description: "",
+    links: [{
+      type: ['plot'],
+      url: 'https://nitramtj.github.io/HPDCrimeDataJam/'
+    }, {
+      type: ['code'],
+      url: 'https://github.com/nitramtj/HPDCrimeDataJam/'
     }]
   }, {
     title: 'Crimes on a map',
