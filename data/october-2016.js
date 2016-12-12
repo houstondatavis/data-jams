@@ -23,5 +23,20 @@ var october2016Event = {
       type: ['code'],
       url: 'http://bl.ocks.org/neerajt/d47b224df790944ea9f7be9d1928f34d'
     }]
+  },{
+    title: 'Meetup in sound',
+    author: 'Amanda',
+    description: "A random idea to timelapse meetup events and members joining as different sounds.  \
+    Kicks, snares, and high-hats represent events, and random keyboard notes of a scale represent \
+    members joining.  Some ideas there were attempted but not part of the current thing include: using \
+    panning to denote time within month, mapping member interests to sounds, and some other things I don't \
+    remember. Sounds are sourced from [Tone.js](https://github.com/Tonejs/Tone.js)'s examples.",
+    links: [{
+      type: ['plot'],
+      url: 'https://pandafulmanda.github.io/data-jam-october-2016/'
+    }, {
+      type: ['code'],
+      url: 'https://github.com/pandafulmanda/data-jam-october-2016/'
+    }]
   }]
 };
