@@ -24,5 +24,6 @@ var jams = {
   'february-2016': febEvent,
   'august-2016': augustEvent,
   'october-2016': october2016Event,
-  'december-2016': december2016Event
+  'december-2016': december2016Event,
+  'february-2017': feb2017Event
 };
