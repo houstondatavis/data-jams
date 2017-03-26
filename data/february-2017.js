@@ -27,7 +27,7 @@ var feb2017Event = {
     }]
   }, {
     title: 'Description decision trees',
-    author: 'Tarek',
+    author: 'Tariq',
     links: [{
       type: ['plot', 'code'],
       url: 'https://github.com/tra38/data-jam-february-2017/tree/master/decisiontree'
