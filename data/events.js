@@ -27,5 +27,9 @@ var jams = {
   'december-2016': december2016Event,
   'february-2017': feb2017Event,
   'june-2017': june2017Event,
-  'july-2017': july2017Event
+  'july-2017': july2017Event,
+  'august-2017': august2017Event,
+  'october-2017': october2017Event,
+  'january-2018': january2018Event,
+  'february-2018': february2018Event,
 };
