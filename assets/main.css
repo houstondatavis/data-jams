@@ -1,20 +1,26 @@
 body {
-  font-family: 'Source Code Pro', monospace;
-  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Source Code Pro', monospace; */
+  font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Source Code Pro', monospace; */
+}
+
+h1, h2 {
+  font-weight: 600;
 }
 
 .list-group-item[data-plot] {
   cursor: pointer;
 }
 
-// .list-group-item a {
-//   display: block;
-//   margin-top: 1em;
-// }
+/* .list-group-item a {
+  display: block;
+  margin-top: 1em;
+} */
 
 .list-group-item a:hover {
   text-decoration: none;
@@ -52,7 +58,7 @@ svg:hover {
   background: rgba(166, 206, 227, 0.05);
 }
 
-#jam-links, #about-data-jam {
+#jam-links, #about-data-jam, section {
   margin-top: 2em;
   margin-bottom: 2em;
 }

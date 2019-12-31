@@ -2,23 +2,29 @@
 <html>
 <head>
   <title></title>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700|Source+Code+Pro:200,300,400,500,600,700,900" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Montserrat:400,700|Source+Code+Pro:200,300,400,500,600,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./assets/main.css">
 </head>
 <body>
+  <!-- <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="./">data jams</a>
+  </nav> -->
   <div class="container">
+    <section class="row" id="event"></section>
+
+    <section class="row">
+      <div class="col-md-12" id="about-data-jam"></div>
+    </section>
+
     <div class="row">
       <div class="col-md-12" id="jam-links"></div>
-    </div>
-    <div class="row" id="event"></div>
-    <div class="row">
-      <div class="col-md-12" id="about-data-jam"></div>
     </div>
   </div>
 
   <script id="jams" type="text/ractive">
+    <h1>archive</h1>
     {{#orderedJams:jamIndex}}
       <jamLink/>
     {{/}}
@@ -32,42 +38,46 @@
   </script>
 
   <script id="about" type="text/ractive">
-    <h2>about data jams</h2>
+    <h1>about data jams</h1>
     <mark markdown="{{description}}"/>
   </script>
 
   <script id="jam-event" type="text/ractive">
-    {{#with jam}}
-      <div class="col-md-12">
-        <div class="jam-event-title">
-          <h3>data jam on</h3>
-          <h1>{{topic}}</h1>
-        </div>
-        <p>
-          <a target="_blank" href="http://www.meetup.com/Houston-Data-Visualization-Meetup/events/{{meetupId}}/"><i>{{month}} {{year}}</i></a>
-        </p>
-        <mark markdown="{{description}}"/>
-        <a target="_blank" href="https://github.com/houstondatavis/{{githubRepo}}">
-          learn more and get the data from <i class="fa fa-github" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="col-md-12">
-        <h3>showcase</h3>
-        {{#showcase.length}}
-          <div class="list-group">
-            {{#showcase:itemIndex}}
-              <showcaseItem/>
-            {{/}}
+    {{#jam.topic}}
+      {{#with jam}}
+        <div class="col-md-12 jam-item">
+          <div class="jam-event-title">
+            <h3>data jam on</h3>
+            <h1>{{topic}}</h1>
           </div>
-        {{/}}
-        {{#formUrl}}
           <p>
-            <a class="btn btn-primary btn-lg" href="{{formUrl}}" target="_blank">share your project</a>            
+            <a target="_blank" href="http://www.meetup.com/Houston-Data-Visualization-Meetup/events/{{meetupId}}/"><i>{{month}} {{year}}</i></a>
           </p>
-          <mark markdown="{{shareInstructions}}"/>
-        {{/}}
-      </div>
-    {{/with}}
+          <mark markdown="{{description}}"/>
+          <a target="_blank" href="https://github.com/houstondatavis/{{githubRepo}}">
+            learn more and get the data from <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-md-12">
+          {{#showcase.length}}
+            <section>
+              <h2>showcase</h2>
+              <div class="list-group">
+                {{#showcase:itemIndex}}
+                  <showcaseItem/>
+                {{/}}
+              </div>
+            </section>
+          {{/}}
+          {{#formUrl}}
+            <p>
+              <a class="btn btn-primary btn-lg" href="{{formUrl}}" target="_blank">share your project</a>            
+            </p>
+            <mark markdown="{{shareInstructions}}"/>
+          {{/}}
+        </div>
+      {{/with}}
+    {{/}}
   </script>
 
   <script id="mark" type="text/ractive">
@@ -125,6 +135,11 @@
   <script type="text/javascript" src="./data/january-2018.js"></script>
   <script type="text/javascript" src="./data/february-2018.js"></script>
   <script type="text/javascript" src="./data/june-2018.js"></script>
+  <script type="text/javascript" src="./data/february-2019.js"></script>
+  <script type="text/javascript" src="./data/july-2019.js"></script>
+  <script type="text/javascript" src="./data/november-2019.js"></script>
+  <script type="text/javascript" src="./data/december-2019.js"></script>
+  <script type="text/javascript" src="./data/january-2020.js"></script>
   <script type="text/javascript" src="./data/events.js"></script>
 
   <script type="text/javascript" src="./assets/jammer.js"></script>

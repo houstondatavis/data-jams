@@ -1,6 +1,11 @@
 (function(window, Ractive, _, jammer, jamLinks, jamEvent){
   'use strict';
 
+  // if ('scrollRestoration' in history) {
+  //   // Back off, browser, I got this...
+  //   history.scrollRestoration = 'manual';
+  // }
+
   var intialContext = {params: {event: location.hash.replace('#!/', '')}};
 
   page('/', index, postRender);
@@ -16,7 +21,7 @@
   );
 
   function index(context, next){
-    jamEvent.set('jam', jamLinks.get('mostRecentJam'));
+    // jamEvent.set('jam', jamLinks.get('mostRecentJam'));
     next();
   }
 
@@ -28,6 +33,11 @@
   }
 
   function show(context, next){
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
     jamEvent.set('jam', jams[context.params.event]);
     next();
   }

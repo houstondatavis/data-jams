@@ -122,7 +122,7 @@
       orderedJams: function(){
         return _.sortBy(this.get('jams'), function(jam){
           return moment( jam.year+ ' ' + jam.month, 'YYYY MMM');
-        });
+        }).reverse();
       },
       mostRecentJam: function(){
         var orderedJams = this.get('orderedJams');
