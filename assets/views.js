@@ -104,7 +104,7 @@
     template: '#jam-link',
     computed: {
       link: function(){
-        return './#!/' + this.get('month').toLowerCase() + '-' + this.get('year');
+        return this.get('month').toLowerCase() + '-' + this.get('year');
       }
     }
   });

@@ -49,7 +49,7 @@ Jammer.prototype.makeRandomBars = function(plotter){
   var counter = 0;
   var barsHTML = '';
 
-  plotter.setAttribute('viewBox',((plotter.clientWidth/2) - (BARS_WIDTH + BARS_SPACING)) + ' 0 50 50');
+  // plotter.setAttribute('viewBox',((plotter.clientWidth/2) - (BARS_WIDTH + BARS_SPACING)) + ' 0 50 50');
 
   while(counter < numberOfBars){
     var bar = rectDOM.cloneNode();

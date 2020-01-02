@@ -12,8 +12,6 @@
   page('/:event', checkEvent, show, postRender);
   page('*', notFound, postRender);
   page({hashbang: true, dispatch: false});
-  page.base('/data-jams/');
-
 
   checkEvent(
     intialContext,
